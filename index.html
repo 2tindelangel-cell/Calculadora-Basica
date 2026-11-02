@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Basica</title>
+    <style>
+    body{
+        background-color: rgb(205, 205, 205);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: medium;
+        align-items: center;
+    }
+    .Calculadora{
+    background-color: #1e1e24; 
+    padding: 20px;
+    border-radius: 20px;  
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    #pantalla {
+    width: 260px;              
+    height: 60px;
+    background-color: #2d2d34; 
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;            
+    font-size: 2rem;          
+    text-align: right;         
+    padding-right: 15px;       
+    margin-bottom: 20px;       
+    box-sizing: border-box;   
+}
+button {
+    width: 60px;               
+    height: 60px;              
+    margin: 5px;               
+    border: none;
+    border-radius: 12px;       
+    font-size: 1.5rem;         
+    font-weight: bold;
+    cursor:pointer;           
+    transition: background-color 0.2s; 
+}
+.btn {
+    background-color: #3e3f47;
+    color: #ffffff;
+}
+button[onclick*="borrar"], button[onclick*="/"], button[onclick*="*"], button[onclick*="-"], button[onclick*="+"] {
+    background-color: #ff9f0a; 
+    color: #ffffff;
+}
+.btn-igual {
+    background-color: #30d158; 
+    color: #ffffff;
+}
+    </style>
+</head>
+<body>
+
+    <div class="Calculadora">
+    <input type="text" id="pantalla" readonly>
+    <br><br>
+    <div class="fila">
+    <button type="button" onclick="borrarTodo()">C</button>
+    <button type="button" onclick="borrarUltimo()">⌫</button>
+    </div>
+    <br>
+    <div class="fila">
+    <button type="button" id="num7" class="btn" onclick=" presionar ('7')">7</button>
+    <button type="button" id="num8" class="btn" onclick="presionar ('8')">8</button>
+    <button type="button" id="num9" class="btn" onclick=" presionar('9')">9</button>
+    <button class="btn" onclick="presionar ('/')">/</button>
+    </div>
+    <br>
+    <div class="fila">
+    <button type="button" id="num4" class="btn" onclick="presionar ('4')">4</button>
+    <button type="button" id="num5" class="btn" onclick="presionar('5')">5</button>
+    <button type="button" id="num6" class="btn" onclick=" presionar ('6')">6</button>
+    <button class="btn" onclick=" presionar('*')">*</button>
+    </div>
+    <br>
+    <div class="fila">
+    <button type="button" id="num1" class="btn" onclick="presionar('1')">1</button>
+    <button type="button" id="num2" class="btn" onclick="presionar('2')">2</button>
+    <button type="button" id="num3" class="btn" onclick="presionar('3')">3</button>
+    <button class="btn" onclick="presionar ('-')">-</button>
+    </div>
+    <br>
+    <div class="fila">
+    <button class="btn" onclick="presionar('.')">.</button>
+    <button class="btn" onclick="presionar('0')">0</button>
+    <button class="btn-igual" onclick="calcular()">=</button>
+    <button class="btn" onclick="presionar ('+')">+</button>
+    </div>
+
+    </div>
+
+
+
+
+
+
+    <script src="acciones.js"></script>
+
+
+</body>
+</html>
